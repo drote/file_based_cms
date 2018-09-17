@@ -1,0 +1,15 @@
+<form action="/users/new" method="post">
+  <div>
+    <label for="new_username">Pick a new username:</label>
+    <input name="new_username" type=text value="<%= params[:new_username] %>">
+  </div>
+  <div>
+  <label for="new_password">Pick a strong password:</label>
+  <input name="new_password" type=text value="<%= params[:new_password] %>">
+  <button type="submit">Sign Up</button>
+  </div>
+</form>
+
+<footer>
+  <p>Or <a href="/users/signin">Sign in</a></p>
+</footer>

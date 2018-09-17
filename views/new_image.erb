@@ -1,0 +1,11 @@
+<form action="/new_image" method="post">  
+  <span>
+    <label for="new_image">Select an image from the public folder:</label>
+    <input name="new_image" type='text' value='<%= params[:new_image] %>'>
+  </span>
+  <span>
+    <label for="image_description">Enter a description for the image:</label>
+    <input name="image_description" type='text' value='<%= params[:image_description] %>'>
+    <button type="submit">Upload</button>
+  </span>
+</form>

@@ -1,0 +1,41 @@
+<!-- index -->
+<ul class="top-menu">
+  <% @files.each do |file| %>
+    <li>
+      <a href="/<%= file %>"><%= file %></a>
+      <a href="/<%= file %>/edit">Edit</a>
+      <form action="<%= file %>/delete" method="post">
+        <button type="submit">Delete</button>
+      </form>
+      <form action="<%= file %>/duplicate" method="post">
+        <button type="submit">Duplicate</button>
+      </form>
+    </li>
+  <% end %>
+</ul>
+
+<div class="new">      
+  <a href="/new">New Document</a>
+  <a href="/new_image">New Image</a>
+</div>
+
+
+
+<footer>
+  <ul class="footer">
+  <% if session[:signed_in_as] %>
+    <li>
+      <p>You are logged in as <%= session[:signed_in_as] %></p>
+      <form action="/users/signout" method="post">
+        <button type="submit">Sign Out</button>
+      </form>
+    </li>
+  <% else %>
+    <li>
+      <a href="/users/signin">Sign In</a>
+    </li>
+    <li>
+      Don't have an acount? <a href="/users/new">Sign up</a>
+    </li>
+  <% end %>
+</footer>
