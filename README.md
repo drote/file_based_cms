@@ -1,1 +1,3 @@
-# ls_17_file_based_cms
+# file_based_cms
+
+A simple ruby/sinatra based CMS.
